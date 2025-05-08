@@ -74,53 +74,61 @@
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
-        <h2 data-aos="fade-up">Skills</h2>
-        <div class="skills-grid" data-aos="fade-up">
+        <h2>My Skills</h2>
+        
+        <!-- Technical Skills Grid -->
+        <div class="skills-grid">
             <div class="skill-card">
                 <i class="fas fa-code"></i>
                 <h3>C Language</h3>
-                <p>Proficient in C programming with strong problem-solving abilities</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%"></div>
+                    <span class="percentage">80%</span>
+                </div>
+              <ul class="skill-details"> 
+                    <li>Parttern Programming </li>
+                    <li>File Handling</li>
+                    <li>Memory Management</li>
+                </ul>
             </div>
+            
             <div class="skill-card">
                 <i class="fab fa-html5"></i>
                 <h3>HTML5</h3>
-                <p>Expert in creating structured and semantic web pages</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%"></div>
+                    <span class="percentage">90%</span>
+                </div>
+                <ul class="skill-details">
+                    <li>Semantic Markup</li>
+                    <li>Accessibility</li>
+                    <li>SEO Best Practices</li>
+                </ul>
             </div>
+            
             <div class="skill-card">
                 <i class="fab fa-css3-alt"></i>
                 <h3>CSS3</h3>
-                <p>Skilled in styling and creating responsive designs</p>
-            </div>
-        </div>
-        
-        <div class="skills-progress" data-aos="fade-up">
-            <h3>Proficiency Levels</h3>
-            <div class="progress-item">
-                <div class="progress-info">
-                    <span>C Language</span>
-                    <span>80%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 80%"></div>
-                </div>
-            </div>
-            <div class="progress-item">
-                <div class="progress-info">
-                    <span>HTML5</span>
-                    <span>90%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 90%"></div>
-                </div>
-            </div>
-            <div class="progress-item">
-                <div class="progress-info">
-                    <span>CSS3</span>
-                    <span>50%</span>
-                </div>
                 <div class="progress-bar">
                     <div class="progress" style="width: 50%"></div>
+                    <span class="percentage">50%</span>
                 </div>
+                <ul class="skill-details">
+                    <li>Flexbox & Grid</li>
+                    <li>Animations</li>
+                    <li>Media Queries</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Additional Skills -->
+        <div class="additional-skills">
+            <div class="skills-tags">
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Team Collaboration</span>
+                <span class="skill-tag">Project Management</span>
+                <span class="skill-tag">Time Management</span>
+                <span class="skill-tag">Communication</span>
             </div>
         </div>
     </section>
@@ -144,30 +152,62 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <h2 data-aos="fade-up">My Projects</h2>
-        <div class="projects-grid" data-aos="fade-up">
-            <div class="project-card">
+        <h2 data-aos="fade-up">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="project-image">
                     <img src="time-zone-tracker-screenshot.png.png" alt="Time Zone Tracker - A web application showing current time and country selection interface with a beautiful gradient background">
+                    <div class="project-overlay">
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-content">
                     <h3>Time Zone Tracker</h3>
-                    <p>A clean and elegant web application that displays current time and allows users to track time across different countries. I developed the major part of the HTML structure and CSS styling, creating a modern interface with a beautiful gradient background, clean typography, and responsive design. Features include a country selector dropdown, real-time clock display, and navigation menu with social media links.</p>
+                    <p>A modern web application for tracking time across different countries, featuring:</p>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check"></i> Real-time clock display</li>
+                        <li><i class="fas fa-check"></i> Country selector with search</li>
+                        <li><i class="fas fa-check"></i> Responsive design</li>
+                        <li><i class="fas fa-check"></i> Beautiful gradient UI</li>
+                    </ul>
                     <div class="project-links">
-                        <a href="https://timezonetracker-govind-jangids-projects.vercel.app/" target="_blank" class="btn">View Project</a>
-                        <a href="#" target="_blank" class="btn btn-outline">GitHub</a>
+                        <a href="https://timezonetracker-govind-jangids-projects.vercel.app/" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="#" target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="project-card">
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="project-image">
-                    <img src="climate.png" alt="Climate Resilience Project Image Placeholder">
+                    <img src="climate.png" alt="Climate Resilience Project Image">
+                    <div class="project-overlay">
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-content">
                     <h3>Climate Resilience Project</h3>
-                    <p>A project focused on climate resilience, showcasing efforts to address climate change challenges through innovative solutions and community engagement.</p>
+                    <p>A comprehensive platform for climate change awareness and solutions:</p>
+                    <ul class="project-features">
+                        <li><i class="fas fa-check"></i> Interactive data visualizations</li>
+                        <li><i class="fas fa-check"></i> Community engagement features</li>
+                        <li><i class="fas fa-check"></i> Resource sharing platform</li>
+                        <li><i class="fas fa-check"></i> Mobile-responsive design</li>
+                    </ul>
                     <div class="project-links">
-                        <a href="https://climateresilience-garvitajain75s-projects.vercel.app/" target="_blank" class="btn">View Project</a>
+                        <a href="https://climateresilience-garvitajain75s-projects.vercel.app/" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
                     </div>
                 </div>
             </div>
@@ -214,9 +254,35 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Garvita Jain. All rights reserved.</p>
-        <p>Contact: <a href="mailto:garvitajain592@gmail.com">garvitajain592@gmail.com</a></p>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Garvita Jain</h3>
+                <p>Web Developer | C Programmer</p>
+                <div class="footer-social">
+                    <a href="https://github.com/garvitajain75" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/garvita-jain-35393b349" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> garvitajain592@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Garvita Jain. All rights reserved.</p>
+        </div>
     </footer>
 
     <button id="scroll-to-top" title="Go to top">
@@ -225,4 +291,4 @@
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
