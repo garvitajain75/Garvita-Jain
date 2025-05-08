@@ -1,3 +1,205 @@
+/* Hero Section Enhancement */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dynamic Background Pattern */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 25%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 25%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 35%),
+        linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25.5%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1)) 0 0;
+    background-size: 60px 60px;
+    animation: heroPatternShift 20s linear infinite;
+}
+
+/* Floating Elements */
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(253, 121, 168, 0.1) 0%, transparent 30%),
+        radial-gradient(circle at 70% 70%, rgba(108, 92, 231, 0.1) 0%, transparent 30%),
+        radial-gradient(circle at 50% 50%, rgba(0, 206, 201, 0.1) 0%, transparent 40%);
+    filter: blur(5px);
+    animation: heroGlow 10s ease-in-out infinite alternate;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.1),
+        inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    transform: translateY(0);
+    transition: all 0.5s ease;
+}
+
+.hero-content:hover {
+    transform: translateY(-10px);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.15),
+        inset 0 1px 1px rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #6c5ce7 0%, #fd79a8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 20px rgba(108, 92, 231, 0.3);
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes heroPatternShift {
+    0% {
+        background-position: 0 0;
+        opacity: 0.7;
+    }
+    100% {
+        background-position: 60px 60px;
+        opacity: 1;
+    }
+}
+
+@keyframes heroGlow {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes titleGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(108, 92, 231, 0.3);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(108, 92, 231, 0.6);
+    }
+}
+
+
+/* Beautiful Background Styles */
+body {
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Animated Background Pattern */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 30%),
+        linear-gradient(60deg, rgba(255, 255, 255, 0.1) 25%, transparent 25.5%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1)) 0 0,
+        linear-gradient(60deg, rgba(255, 255, 255, 0.1) 25%, transparent 25.5%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1)) 25px 25px;
+    background-size: 50px 50px;
+    z-index: -1;
+    animation: backgroundShift 20s linear infinite;
+}
+
+/* Floating Elements */
+.floating-bg span {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    border-radius: 50%;
+    animation: float 15s infinite;
+}
+
+.floating-bg span:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.floating-bg span:nth-child(2) { top: 20%; right: 20%; animation-delay: 2s; }
+.floating-bg span:nth-child(3) { bottom: 30%; left: 30%; animation-delay: 4s; }
+.floating-bg span:nth-child(4) { bottom: 15%; right: 25%; animation-delay: 6s; }
+.floating-bg span:nth-child(5) { top: 40%; left: 40%; animation-delay: 8s; }
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    25% {
+        transform: translate(25px, -25px) rotate(90deg) scale(1.1);
+    }
+    50% {
+        transform: translate(0, 50px) rotate(180deg) scale(1);
+    }
+    75% {
+        transform: translate(-25px, -25px) rotate(270deg) scale(0.9);
+    }
+}
+
+@keyframes backgroundShift {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+/* Section Background Enhancement */
+section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    margin: 2rem auto;
+    max-width: 1400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Background Effects */
+.skill-card, .project-card, .interest-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+.skill-card:hover, .project-card:hover, .interest-card:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(31, 38, 135, 0.2);
+}
+
+
 /* Footer Styles */
 .footer {
     background: linear-gradient(135deg, var(--dark-color) 0%, #1a1a1a 100%);
